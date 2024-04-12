@@ -78,3 +78,7 @@ Limitations include data intensity and computational resource requirements.
 
 ~Collaboration and Partnerships: Collaborate with experts to share insights and advancements in sentiment analysis techniques.
 
+
+# Data Report
+Link to the [Data Report] (https://docs.google.com/document/d/1jRVr4cdP5gOEwjsSwbTNUiBrlSHthXD-j2XfN_8kSNw/edit?usp=sharing)
+
