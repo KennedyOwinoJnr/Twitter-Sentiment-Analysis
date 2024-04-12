@@ -1,4 +1,4 @@
-### **Leveraging Sentiment Analysis for Enhanced Brand Management**
+# **Investing with the Crowd: Sentiment Analysis for Enhanced Investment Performance**
 
 # **Business Understanding**
 Twitter serves as a platform where users frequently express their opinions and experiences regarding various products. Analyzing these sentiments can yield valuable insights into consumer preferences and perceptions. Understanding public sentiment towards a brand is pivotal as positive sentiment often correlates with a strong brand image, while negative sentiment may indicate areas requiring attention.
