@@ -54,6 +54,8 @@ Tuned complement-based Naive Bayes model observed to have an improved recall sco
 # **Deep Learning**
 Utilization of advanced neural network architectures to extract actionable insights from social media data.
 
+In our project, false positives occur when the sentiment analysis model incorrectly predicts positive sentiment in tweets that do not express it, potentially leading to overestimation of brand positivity and misguided investment decisions. Conversely, false negatives happen when the model fails to identify positive sentiment in tweets that do express it, potentially resulting in missed investment opportunities or undervaluation of stocks. False negatives are deemed more detrimental than false positives. The best model achieved a recall of 71% and an accuracy score of 72%, indicating its ability to identify positive sentiments in the dataset accurately.
+
 # **Conclusion**
 Deep Learning model identified as the best-performing model.
 
