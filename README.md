@@ -1,55 +1,62 @@
-# Leveraging Sentiment Analysis for Enhanced Brand Management
-## Business Understanding
+**Leveraging Sentiment Analysis for Enhanced Brand Management**
+**Business Understanding**
+Twitter serves as a platform where users frequently express their opinions and experiences regarding various products. Analyzing these sentiments can yield valuable insights into consumer preferences and perceptions. Understanding public sentiment towards a brand is pivotal as positive sentiment often correlates with a strong brand image, while negative sentiment may indicate areas requiring attention.
 
-Twitter is a platform where users often share their experiences and opinions about products. Analysing these sentiments can provide valuable feedback on what users like or dislike about a product, which can guide improvements and new features. Sentiment analysis can help understand how the brand is perceived in the market. Positive sentiment is usually associated with a strong brand image, while negative sentiment can indicate potential issues that need to be addressed.
+In investment management and trading, comprehensive analysis is essential for making informed decisions. Alongside financial metrics and technical analysis, gauging public sentiment towards specific stocks provides a unique perspective. Positive public perception can bolster investor confidence, leading to increased demand for stocks and potentially better market performance.
 
-Investment management and trading require comprehensive analysis to make informed decisions. While financial metrics and technical analysis play a significant role, understanding public sentiment towards a particular stock can provide a unique perspective. Positive public perception often translates into increased investor confidence, higher demand for the stock, and potentially better performance in the market.
+**Problem Statement**
+Investment management and trading in the stock market present challenges due to market volatility and unpredictable events. Incorporating sentiment analysis from social media can provide valuable insights into public perception and sentiment towards specific stocks, thereby enhancing traditional analysis methods. In the rapidly evolving technology market, understanding customer sentiment towards products is crucial. However, manual sentiment analysis is time-consuming and prone to bias. Automating sentiment analysis using Machine Learning offers a scalable, efficient, and reliable solution.
 
-## How Positive Public Perception Improves Stock Performance:
-1. **Increased Investor Confidence**: Positive sentiment towards a stock can boost investor confidence, leading to increased buying activity. Investors are more likely to invest in companies with positive public perception, contributing to higher demand for the stock.
+**Key Objectives**
+Utilize Natural Language Processing techniques to construct a machine learning model for automated sentiment analysis of tweets related to Google and Apple products.
+Collect and analyze sentiment data from Twitter regarding Apple and Google stocks.
+Augment traditional financial analysis with sentiment analysis to identify potential investment opportunities or risks.
+Use sentiment analysis to inform investment decisions, providing an alternative perspective on which stocks to invest in based on social sentiment.
+Data Source
+The dataset, sourced from CrowdFlower via data.world, comprises over 9,000 tweets with sentiment ratings labeled as positive, negative, or neutral. The tweets were collected during the South by Southwest conference, primarily discussing Google and Apple products.
 
-2. **Enhanced Brand Reputation**: Positive sentiment reflects well on a company's brand reputation. A strong brand image can attract investors and customers alike, leading to long-term growth and stability.
-
-3. **Favorable Market Conditions**: Stocks with positive sentiment tend to perform well in favorable market conditions. Positive news or sentiment can drive up the stock price, resulting in better returns for investors.
-
-4. **Reduced Risk of Negative Events**: Companies with positive public perception are less susceptible to negative events impacting their stock price. Positive sentiment acts as a buffer against adverse news or market downturns, helping to mitigate potential losses.
-
-## Problem Statement
-Investment management and trading in the stock market can be challenging due to market volatility, economic conditions, and unpredictable events. Incorporating sentiment analysis from social media can provide valuable insights into public perception and sentiment towards specific stocks, enhancing traditional analysis methods.
-
-In the rapidly evolving technology market, understanding customer sentiment towards products is crucial for companies like Google and Apple. However, manually analyzing customer sentiment is time-consuming and prone to bias. Given the vast amount of customer feedback available on platforms like Twitter, automating sentiment analysis using Machine Learning offers a scalable, efficient, and reliable solution.
-
-The objective of this project is to develop and deploy Machine Learning models for sentiment analysis of customer feedback towards Google and Apple products. By analyzing large datasets from social media platforms, we aim to provide valuable insights to investment managers, traders, and technology companies to make informed decisions and enhance their understanding of customer sentiment.
-
-## Key Objectives
-1. **Utilize Natural Language Processing** techniques to construct a machine learning model for automated sentiment analysis of tweets related to Google and Apple products.
-   
-2. **Utilize Social Sentiment Analysis**: Collect and analyze sentiment data from Twitter regarding two stock options - Apple and Google
-
-3. **Gain Alternative Insights**: Augment traditional financial analysis with sentiment analysis to identify potential investment opportunities or risks that may not be captured by conventional methods.
-
-4. **Improve Investment Decision-making**: Use sentiment analysis to inform investment decisions, providing a different angle on which stocks to invest in based on their social sentiment.
-
-## Data Understanding
-
-The dataset, sourced from CrowdFlower via data.world, comprises over 9,000 tweets with sentiment ratings labeled as positive, negative, or neutral by human raters.
-
-The tweets were posted during the South by Southwest conference, primarily discussing Google and Apple products. The crowd was asked if the tweet expressed positive, negative, or no emotion towards a brand and/or product. If some emotion was expressed, they were also asked to specify which brand or product was the target of that emotion. The data was compiled in 2013 by Kent Cavender-Bares.
-
-Tweets, being succinct and emotionally charged, serve as effective indicators of consumer sentiment. South by Southwest serves as a platform for showcasing the latest technology, enabling consumers to compare products from major tech companies directly and potentially mitigating biases to some extent.
-
-The target variable was engineered into three classes: tweets with positive sentiment, negative sentiment, and those with neutral sentiment, encompassing 'I can't tell' sentiments and 'no emotion' sentiments.
-
+**Data Description**
 The dataset contains three columns:
 
-  - `tweet_text`: This column contains the text of the tweet, facilitating sentiment analysis based on the content itself.
+tweet_text: Contains the text of the tweet, facilitating sentiment analysis based on the content itself.
+product: Indicates whether the expressed emotion pertains to a specific brand or product.
+sentiment: Serves as a quick indicator of brand-related sentiment, allowing for efficient initial filtering of relevant data.
 
-  - `product`: This column indicates whether the expressed emotion pertains to a specific brand or product. It enables targeted sentiment analysis tailored to the brand's performance.
+**Data Preparation**
 
-  - `sentiment(target variable)`: This column serves as a quick indicator of brand-related sentiment, allowing for efficient initial filtering of relevant data.
+**1.Data Cleaning**
+Removal of placeholders, Twitter handles, stopwords, punctuation, and mentions of the SXSW conference.
+Websites and HTML formatting removal.
+Exclusion of "SXSW" mentions.
+**2.Data Distribution**
+Handling missing data by creating a new product category called "undefined."
+Adding a new column "Brand" to indicate the brand the tweet is about.
+**3.Data Preprocessing**
+Lowercasing, tokenization, and lemmatization of text data.
+EDA (Exploratory Data Analysis)
+The EDA focused on gaining insights into customer sentiments towards Google and Apple products. Key findings include the majority of tweets expressing neutral sentiment and the necessity for data cleaning due to missing values.
 
-_(The original column names were changed to add simplicity to the data)_
+**Modeling**
+1.Baseline Model
+XGBoost classifier with default parameters chosen as the baseline model.
+Demonstrated superior performance on the training set compared to a naive model.
+2.First Iteration: Complement Naive Bayes Model
+Tuned complement-based Naive Bayes model observed to have an improved recall score of 71%.
 
+**Deep Learning**
+Utilization of advanced neural network architectures to extract actionable insights from social media data.
 
+**Conclusion**
+Deep Learning model identified as the best-performing model.
+Benefits include competitive advantage and real-time analysis.
+Limitations include data intensity and computational resource requirements.
 
+**Recommendation**
+~Feature Engineering: Explore additional features to enhance predictive power.
+~Identify Influencers: Analyze sentiment of influential users or accounts.
+~Time Series Analysis: Analyze brand mentions over time.
+~Focus on Specific Events: Incorporate information about specific events influencing sentiment.
+~Continuous Monitoring: Implement a system for real-time sentiment trend monitoring.
+~Integration with Decision-Making Processes: Incorporate sentiment analysis insights into investment decision-making.
+~Collaboration and Partnerships: Collaborate with experts to share insights and advancements in sentiment analysis techniques.
 
