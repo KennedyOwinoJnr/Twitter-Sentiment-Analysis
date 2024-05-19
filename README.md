@@ -80,5 +80,5 @@ Limitations include data intensity and computational resource requirements.
 
 
 # Data Report
-Link to the [Data Report] (https://docs.google.com/document/d/1jRVr4cdP5gOEwjsSwbTNUiBrlSHthXD-j2XfN_8kSNw/edit?usp=sharing)
+The data report can be found [here](https://docs.google.com/document/d/1jRVr4cdP5gOEwjsSwbTNUiBrlSHthXD-j2XfN_8kSNw/edit?usp=sharing).
 
